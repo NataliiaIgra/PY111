@@ -17,8 +17,6 @@ def search(arr: Sequence, elem: int) -> int:
     for index, element in enumerate(arr):
         if element == elem:
             return index
-        else:
-            continue
     return -1
 
 
