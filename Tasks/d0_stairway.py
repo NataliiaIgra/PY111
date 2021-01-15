@@ -13,7 +13,7 @@ def stairway_path(stairway: Sequence[Union[float, int]]) -> Union[float, int]:
     min_list = []
     for i in range(len(stairway)):
         if i != 0 and i != 1:
-            option = min(stairway[i] + min_list[i - 2], stairway[i] + min_list[i - 1])
+            option = stairway[i] + min(min_list[i - 2], min_list[i - 1])
             min_list.append(option)
         else:
             min_list.append(stairway[i])
